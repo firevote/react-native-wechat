@@ -163,7 +163,7 @@ RCT_EXPORT_METHOD(pay:(NSDictionary *)data
     req.partnerId           = data[@"partnerId"];
     req.prepayId            = data[@"prepayId"];
     req.nonceStr            = data[@"nonceStr"];
-    req.timeStamp           = [data[@"timeStamp"] unsignedIntValue];
+    req.timeStamp           = [data[@"timeStamp"] longLongValue];
     req.package             = data[@"package"];
     req.sign                = data[@"sign"];
     BOOL success = [WXApi sendReq:req];
